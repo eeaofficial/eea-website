@@ -1,6 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Electronics Engineers Association</h1>
-<p>This is the EEA website home page.</p>
+
+<!-- HERO / INTRO -->
+<section class="hero">
+    <h1>Electronics Engineers Association</h1>
+    <p>
+        The Electronics Engineers Association (EEA) is a student-led technical
+        association that promotes innovation, collaboration, and professional growth
+        through events, workshops, and symposiums.
+    </p>
+</section>
+
+<!-- UPCOMING EVENT -->
+<section class="upcoming">
+    <h2>Upcoming Event</h2>
+    <div class="event-card">
+        <p><strong>Symposium – Ascentron</strong></p>
+        <p>Registrations opening soon</p>
+        <button disabled>Event Page Available Soon</button>
+    </div>
+</section>
+
+<!-- EVENTS CATEGORIES -->
+<section class="categories">
+    <h2>Our Activities</h2>
+
+    <div class="category-grid">
+        <div class="category">Workshops</div>
+        <div class="category">Conferences</div>
+        <div class="category">Technical Events</div>
+        <div class="category">Hackathons</div>
+    </div>
+</section>
+
 {% endblock %}
