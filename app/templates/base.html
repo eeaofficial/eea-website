@@ -2,12 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EEA</title>
+    <title>EEA | Electronics Engineers Association</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/eea.css') }}">
 </head>
 <body>
 
-    {% block content %}{% endblock %}
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <span>EEA</span>
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Events</a>
+            <a href="#">Members</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© Electronics Engineers Association</p>
+    </footer>
 
 </body>
 </html>
