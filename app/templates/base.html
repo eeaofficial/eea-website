@@ -16,16 +16,21 @@
         <div class="logo">
             <span>EEA</span>
         </div>
-
-        <nav>
-
-            <a href="#home">Home</a>
-            <a href="#activities">Activities</a>
-            <a href="#eea members">Members</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-            
+        <nav class="navbar">
+            <div class="logo">EEA</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#activities">Activities</a>
+                <a href="#members">Members</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <!-- LOGIN -->
+            <div class="nav-login">
+                <a href="/login" class="login-btn">Admin Login</a>
+            </div>
         </nav>
+
     </header>
 
     <!-- MAIN CONTENT -->
@@ -33,11 +38,49 @@
         {% block content %}{% endblock %}
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© Electronics Engineers Association</p>
-    </footer>
 
 </body>
+<!-- CONTACT SECTION -->
+<footer id="contact" class="footer">
+
+    <div class="footer-container">
+
+        <!-- LEFT -->
+        <div class="footer-brand">
+            <h3>Electronics Engineers Association</h3>
+            <p>
+                Department of Electronics & Communication Engineering<br>
+                Official student association promoting innovation,
+                leadership, and technical excellence.
+            </p>
+        </div>
+
+        <!-- CENTER -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/activities">Activities</a></li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+            </ul>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Email: eeaofficial@gmail.com</p>
+            <p>Instagram: @eea_ece</p>
+            <p>LinkedIn: Electronics Engineers Association</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Electronics Engineers Association · All rights reserved
+    </div>
+
+</footer>
+
 
 </html>

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<script>
+    // Clear form fields when page is loaded from back/forward cache
+    window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            document.querySelectorAll("input").forEach(input => {
+                input.value = "";
+            });
+        }
+    });
+</script>
+
+<section class="login-section">
+    <div class="login-card">
+        <h2>{{ role_name }} Login</h2>
+        <p class="login-note">
+            Enter password for {{ role_name }} access
+        </p>
+
+        {% if error %}
+            <p style="color:red; font-size:14px">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST">
+            <div class="form-group">
+                <label>{{ role_name }} Password</label>
+                <input type="password" name="role_password" required autocomplete="off">
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

@@ -2,35 +2,213 @@
 
 {% block content %}
 
-<!-- EEA DESCRIPTION -->
-<section id="home">
-    <h2>Electronics Engineers Association</h2>
-    <p>
-        EEA is the official association of the ECE department,
-        organizing technical and non-technical activities.
-    </p>
+<!-- HOME / HERO -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Electronics Engineers Association</h1>
+        <p>
+            The official student association of the Electronics and Communication
+            Engineering department, fostering technical excellence, innovation,
+            and professional growth.
+        </p>
+    </div>
 </section>
+
+<!-- UPCOMING EVENT -->
+<section id="upcoming-event" class="section">
+    <div class="section-header">
+        <h2>Upcoming Event</h2>
+        <a href="/upcoming-events" class="see-more">
+        See Upcoming Events →
+    </a>
+    </div>
+    
+    
+    <div class="upcoming-card">
+        <div class="upcoming-content">
+            <h3>ASCENTRON 2025</h3>
+            <p class="event-date">1st & 2nd November</p>
+            <p class="event-desc">
+                Ascentron is the flagship technical symposium of the
+                Electronics Engineers Association, featuring workshops,
+                competitions, and expert talks.
+            </p>
+
+            <button class="event-btn" disabled>
+                Event Page Available Soon
+            </button>
+        </div>
+    </div>
+    
+</section>
+
 
 <!-- ACTIVITIES -->
-<section id="activities">
-    <h2>Activities</h2>
-    <p>Workshops, Conferences, Hackathons, Events</p>
+<section id="activities" class="section">
+    <div class="section-header">
+        <h2>Activities</h2>
+        <a href="/activities" class="see-more">
+            See more &gt;
+        </a>
+    </div>
+
+
+    <div class="activities-grid">
+
+        <div class="activity-card">
+            <h3>Workshops</h3>
+            <p>
+                Hands-on technical workshops conducted to enhance
+                practical knowledge and industry-relevant skills.
+            </p>
+        </div>
+
+        <div class="activity-card">
+            <h3>Conferences</h3>
+            <p>
+                Academic and technical conferences that expose students
+                to research, innovation, and expert insights.
+            </p>
+        </div>
+
+        <div class="activity-card">
+            <h3>Technical Events</h3>
+            <p>
+                Competitive and collaborative events designed to test
+                problem-solving and engineering skills.
+            </p>
+        </div>
+
+        <div class="activity-card">
+            <h3>Hackathons</h3>
+            <p>
+                Innovation-driven coding and hardware challenges that
+                encourage creativity and teamwork.
+            </p>
+        </div>
+
+    </div>
 </section>
 
-<section id="eea members">
-    <h2>EEA Members</h2>
-    <p>Description</p>
+
+<!-- EEA MEMBERS -->
+<section id="members" class="section">
+
+    <div class="section-header">
+        <h2>EEA Members</h2>
+        <a href="/members" class="see-more">
+            See more &gt;
+        </a>
+    </div>
+
+    <!-- TOP LEADERSHIP -->
+    <div class="members-row">
+
+        <div class="member-card highlight">
+            <h3>HOD</h3>
+            <p class="member-name">Dr. XYZ</p>
+            <p class="member-role">Head of the Department</p>
+        </div>
+
+        <div class="member-card highlight">
+            <h3>Faculty President</h3>
+            <p class="member-name">Dr. ABC</p>
+            <p class="member-role">Faculty Coordinator</p>
+        </div>
+
+    </div>
+
+    <!-- STUDENT LEADERSHIP -->
+    <div class="members-row">
+
+        <div class="member-card">
+            <h3>Chairperson</h3>
+            <p class="member-name">Student Name</p>
+        </div>
+
+        <div class="member-card">
+            <h3>Vice Chairperson</h3>
+            <p class="member-name">Student Name</p>
+        </div>
+
+        <div class="member-card">
+            <h3>Program Secretary</h3>
+            <p class="member-name">Student Name</p>
+        </div>
+
+        <div class="member-card">
+            <h3>Treasurer</h3>
+            <p class="member-name">Student Name</p>
+        </div>
+
+    </div>
+
+    <!-- EXECUTIVE MEMBERS -->
+    <div class="members-row">
+
+        <div class="member-card">
+            <h3>Executive Member</h3>
+            <p class="member-name">Student Name</p>
+        </div>
+
+        <div class="member-card">
+            <h3>Executive Member</h3>
+            <p class="member-name">Student Name</p>
+        </div>
+
+    </div>
+
 </section>
 
-<section id="gallery">
-    <h2>Gallery</h2>
-    <p>Inauguration, Events</p>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+
+    <div class="section-header">
+        <h2>Gallery</h2>
+        <a href="/gallery" class="see-more">
+            See more &gt;
+        </a>
+    </div>
+
+    <div class="gallery-wrapper">
+        <div class="gallery-track">
+            <div class="gallery-item">Inauguration</div>
+            <div class="gallery-item">Workshops</div>
+            <div class="gallery-item">Hackathons</div>
+            <div class="gallery-item">Ascentron</div>
+            <div class="gallery-item">Guest Lectures</div>
+            <div class="gallery-item">Industrial Visits</div>
+        </div>
+    </div>
+
+    <div class="gallery-action">
+        <button class="gallery-btn">View Full Gallery</button>
+    </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+
+<!-- CONTACT
+<section id="contact" class="section contact-section">
     <h2>Contact</h2>
-    <p>Email: eeaofficial@gmail.com</p>
-</section>
+
+    <div class="contact-grid">
+        <div class="contact-item">
+            <h4>Email</h4>
+            <p>eeaofficial@gmail.com</p>
+        </div>
+
+        <div class="contact-item">
+            <h4>Instagram</h4>
+            <p>@eea_ece</p>
+        </div>
+
+        <div class="contact-item">
+            <h4>LinkedIn</h4>
+            <p>Electronics Engineers Association</p>
+        </div>
+    </div>
+</section> -->
+
 
 {% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+    <div class="card">
+        <h2>{{ role|capitalize }} Dashboard</h2>
+        <p>Manage EEA website content based on your role.</p>
+
+        <div class="dashboard-grid">
+
+            {% if role == "super" %}
+                <a href="#" class="dash-card">Edit EEA Description</a>
+                <a href="#" class="dash-card">Manage Contacts</a>
+                <a href="#" class="dash-card">Change Role Passwords</a>
+                <a href="#" class="dash-card">Upcoming Events</a>
+                <a href="#" class="dash-card">Members</a>
+                <a href="#" class="dash-card">Gallery</a>
+                <a href="#" class="dash-card">Activities</a>
+                <a href="#" class="dash-card">Announcements</a>
+
+            {% elif role == "content" %}
+                <a href="#" class="dash-card">Manage Members</a>
+                <a href="#" class="dash-card">Manage Gallery</a>
+
+            {% elif role == "event" %}
+                <a href="#" class="dash-card">Manage Activities</a>
+                <a href="#" class="dash-card">Manage Announcements</a>
+            {% endif %}
+
+        </div>
+    </div>
+</section>
+{% endblock %}

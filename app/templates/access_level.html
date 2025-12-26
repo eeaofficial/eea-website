@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="login-section">
+    <div class="login-card">
+        <h2>Select Access Level</h2>
+        <p class="login-note">
+            Choose your administrative role to continue
+        </p>
+
+        <div class="role-grid">
+            <a href="{{ url_for('role_login', role='super') }}" class="role-card">
+                <h3>Super Admin</h3>
+                <p>Full system control</p>
+            </a>
+
+            <a href="{{ url_for('role_login', role='content') }}" class="role-card">
+                <h3>Content Admin</h3>
+                <p>Members & Gallery</p>
+            </a>
+
+            <a href="{{ url_for('role_login', role='event') }}" class="role-card">
+                <h3>Event Admin</h3>
+                <p>Activities & Announcements</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

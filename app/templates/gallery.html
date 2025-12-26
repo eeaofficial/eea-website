@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="page-hero">
+    <h1>Gallery</h1>
+    <p>
+        Moments captured from workshops, events,
+        conferences, and symposiums conducted by EEA
+    </p>
+</section>
+
+<!-- GALLERY SECTION -->
+<section class="section gallery-section">
+
+    <div class="gallery-grid">
+
+        <!-- EVENT CARD -->
+        <div class="gallery-card">
+            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
+            <div class="gallery-info">
+                <h3>Inauguration</h3>
+                <p>2024</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
+            <div class="gallery-info">
+                <h3>Ascentron</h3>
+                <p>2024</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
+            <div class="gallery-info">
+                <h3>Workshop on AI</h3>
+                <p>2023</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
+            <div class="gallery-info">
+                <h3>Tech Symposium</h3>
+                <p>2023</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
