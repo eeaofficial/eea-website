@@ -14,3 +14,9 @@ ROLE_PASSWORDS = {
     "content": "content123",
     "event": "event123"
 }
+
+CONTACT_INFO = {
+    "email": "eeaofficial@gmail.com",
+    "instagram": "@eea_ece",
+    "linkedin": "Electronics Engineers Association"
+}

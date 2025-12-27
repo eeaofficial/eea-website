@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section">
+    <h2>Edit Gallery Event</h2>
+
+    <form method="POST" enctype="multipart/form-data" class="form-card">
+
+        <label>Event Title</label>
+        <input type="text" name="title" value="{{ gallery.title }}" required>
+
+        <label>Current Thumbnail</label><br>
+        <img
+            src="{{ url_for('static',
+            filename='uploads/gallery/thumbnails/' + gallery.thumbnail) }}"
+            style="max-width:200px; border-radius:8px;">
+
+        <br><br>
+
+        <label>Change Thumbnail</label>
+        <input type="file" name="thumbnail" accept="image/*">
+
+        <br><br>
+
+        <button type="submit" class="btn-primary">Save Changes</button>
+        <a href="{{ url_for('manage_gallery') }}">Cancel</a>
+
+    </form>
+</section>
+
+{% endblock %}

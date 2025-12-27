@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section">
+    <h2>Manage Gallery Images</h2>
+    <p>Add or remove images for this event gallery</p>
+
+    <!-- Upload images -->
+    <form method="POST" enctype="multipart/form-data" class="upload-form">
+        <input type="file" name="images" multiple required>
+        <button type="submit" class="btn-primary">Upload Images</button>
+    </form>
+
+    <hr>
+
+    <!-- Existing images -->
+    <div class="gallery-images-grid">
+
+        {% for img in images %}
+        <div class="gallery-image-card">
+            <img src="{{ url_for('static', filename='uploads/gallery/' + gallery_id|string + '/' + img) }}">
+
+            <a href="{{ url_for('delete_gallery_image',
+                                gallery_id=gallery_id,
+                                filename=img) }}"
+               onclick="return confirm('Delete this image?')"
+               class="delete-btn">
+                Delete
+            </a>
+        </div>
+        {% else %}
+        <p>No images uploaded yet.</p>
+        {% endfor %}
+
+    </div>
+
+    <br>
+    <a href="{{ url_for('manage_gallery') }}">← Back to Gallery</a>
+
+</section>
+
+{% endblock %}

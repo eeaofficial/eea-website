@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section">
+    <h2>Gallery Management</h2>
+    <p>Manage event galleries and thumbnails</p>
+
+    <a href="{{ url_for('add_gallery') }}" class="btn-primary">
+        + Add New Gallery Event
+    </a>
+
+    <div class="gallery-admin-grid">
+
+        {% for event in gallery %}
+        <div class="gallery-admin-card">
+
+            <img src="{{ url_for('static', filename='uploads/gallery/thumbnails/' + event.thumbnail) }}"
+                alt="{{ event.title }}">
+
+            <h3>{{ event.title }}</h3>
+
+            <div class="actions">
+                <div class="actions">
+                    <a href="{{ url_for('edit_gallery', gallery_id=event.id) }}">Edit</a>
+                    |
+                    <a href="{{ url_for('manage_gallery_images', gallery_id=event.id) }}">Manage Images</a>
+                    |
+                    <a href="{{ url_for('delete_gallery', gallery_id=event.id) }}"
+                        onclick="return confirm('Delete this gallery?')">
+                        Delete
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        {% else %}
+        <p>No gallery events yet.</p>
+        {% endfor %}
+
+    </div>
+</section>
+
+{% endblock %}

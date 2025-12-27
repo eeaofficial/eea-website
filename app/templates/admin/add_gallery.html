@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section">
+    <h2>Add Gallery Event</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label>Event Title</label>
+        <input type="text" name="title" required>
+
+        <label>Thumbnail Image</label>
+        <input type="file" name="thumbnail" accept="image/*" required>
+
+        <button type="submit" class="btn-primary">Save</button>
+    </form>
+</section>
+
+{% endblock %}

@@ -5,42 +5,38 @@
 <!-- HOME / HERO -->
 <section id="home" class="hero">
     <div class="hero-content">
-        <h1>Electronics Engineers Association</h1>
-        <p>
-            The official student association of the Electronics and Communication
-            Engineering department, fostering technical excellence, innovation,
-            and professional growth.
-        </p>
+        <h1>{{ eea.title }}</h1>
+        <p>{{ eea.content }}</p>
+
+
     </div>
 </section>
 
 <!-- UPCOMING EVENT -->
+{% if upcoming.active %}
 <section id="upcoming-event" class="section">
     <div class="section-header">
         <h2>Upcoming Event</h2>
         <a href="/upcoming-events" class="see-more">
-        See Upcoming Events →
-    </a>
+            See Upcoming Events →
+        </a>
     </div>
-    
-    
+
     <div class="upcoming-card">
         <div class="upcoming-content">
-            <h3>ASCENTRON 2025</h3>
-            <p class="event-date">1st & 2nd November</p>
-            <p class="event-desc">
-                Ascentron is the flagship technical symposium of the
-                Electronics Engineers Association, featuring workshops,
-                competitions, and expert talks.
-            </p>
+            <h3>{{ upcoming.title }}</h3>
+            <p class="event-date">{{ upcoming.date }}</p>
+            <p class="event-desc">{{ upcoming.description }}</p>
 
             <button class="event-btn" disabled>
                 Event Page Available Soon
             </button>
         </div>
     </div>
-    
 </section>
+{% endif %}
+
+
 
 
 <!-- ACTIVITIES -->
@@ -186,29 +182,5 @@
         <button class="gallery-btn">View Full Gallery</button>
     </div>
 </section>
-
-
-<!-- CONTACT
-<section id="contact" class="section contact-section">
-    <h2>Contact</h2>
-
-    <div class="contact-grid">
-        <div class="contact-item">
-            <h4>Email</h4>
-            <p>eeaofficial@gmail.com</p>
-        </div>
-
-        <div class="contact-item">
-            <h4>Instagram</h4>
-            <p>@eea_ece</p>
-        </div>
-
-        <div class="contact-item">
-            <h4>LinkedIn</h4>
-            <p>Electronics Engineers Association</p>
-        </div>
-    </div>
-</section> -->
-
 
 {% endblock %}

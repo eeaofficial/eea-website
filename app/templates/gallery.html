@@ -1,56 +1,29 @@
 {% extends "base.html" %}
-
 {% block content %}
 
-<!-- HERO -->
 <section class="page-hero">
     <h1>Gallery</h1>
-    <p>
-        Moments captured from workshops, events,
-        conferences, and symposiums conducted by EEA
-    </p>
+    <p>Moments captured from EEA events and activities</p>
 </section>
 
-<!-- GALLERY SECTION -->
-<section class="section gallery-section">
+<section class="section gallery-grid">
 
-    <div class="gallery-grid">
+    {% for g in galleries %}
+    <a href="{{ url_for('view_gallery', gallery_id=g.id) }}">
 
-        <!-- EVENT CARD -->
-        <div class="gallery-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <div class="gallery-info">
-                <h3>Inauguration</h3>
-                <p>2024</p>
-            </div>
-        </div>
+       class="gallery-card">
 
-        <div class="gallery-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <div class="gallery-info">
-                <h3>Ascentron</h3>
-                <p>2024</p>
-            </div>
-        </div>
+        <img src="{{ url_for('static',
+            filename='uploads/gallery/thumbnails/' + g.thumbnail) }}"
+             alt="{{ g.title }}">
 
-        <div class="gallery-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <div class="gallery-info">
-                <h3>Workshop on AI</h3>
-                <p>2023</p>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <div class="gallery-info">
-                <h3>Tech Symposium</h3>
-                <p>2023</p>
-            </div>
-        </div>
-
-    </div>
+        <h3>{{ g.title }}</h3>
+    </a>
+    {% else %}
+    <p>No gallery events available.</p>
+    {% endfor %}
 
 </section>
 
 {% endblock %}
+

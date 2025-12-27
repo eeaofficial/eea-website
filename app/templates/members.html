@@ -1,76 +1,43 @@
 {% extends "base.html" %}
-
 {% block content %}
 
-<!-- HERO -->
 <section class="page-hero">
     <h1>EEA Members</h1>
-    <p>
-        Office bearers and executive members of the
-        Electronics Engineers Association
-    </p>
+    <p>Meet the faculty and student leadership of EEA</p>
 </section>
 
-<!-- MEMBERS SECTION -->
-<section class="section members-section">
+<section class="section">
 
-    <!-- HOD -->
-    <div class="member-row">
-        <div class="member-card highlight">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <h3>Dr. XYZ</h3>
-            <p class="role">Head of the Department</p>
+    <!-- FACULTY -->
+    <h2 class="section-title">Faculty Coordinators</h2>
+    <div class="members-grid">
+        {% for m in members if m.type == "faculty" %}
+        <div class="member-card">
+            {% if m.photo %}
+                <img src="{{ url_for('static', filename='uploads/members/' ~ m.photo) }}">
+            {% else %}
+                <div class="member-placeholder">👤</div>
+            {% endif %}
+            <h3>{{ m.name }}</h3>
+            <p>{{ m.role }}</p>
         </div>
+        {% endfor %}
     </div>
 
-    <!-- FACULTY PRESIDENT -->
-    <div class="member-row">
+    <!-- STUDENTS -->
+    <h2 class="section-title">Student Committee</h2>
+    <div class="members-grid">
+        {% for m in members if m.type == "student" %}
         <div class="member-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <h3>Dr. ABC</h3>
-            <p class="role">Faculty President</p>
+            {% if m.photo %}
+                <img src="{{ url_for('static', filename='uploads/members/' ~ m.photo) }}">
+            {% else %}
+                <div class="member-placeholder">👤</div>
+            {% endif %}
+            <h3>{{ m.name }}</h3>
+            <p>{{ m.role }}</p>
         </div>
-    </div>
-
-    <!-- STUDENT LEADERS -->
-    <div class="member-grid">
-
-        <div class="member-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <h3>Name</h3>
-            <p class="role">Chairperson</p>
-        </div>
-
-        <div class="member-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <h3>Name</h3>
-            <p class="role">Vice Chairperson</p>
-        </div>
-
-        <div class="member-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <h3>Name</h3>
-            <p class="role">Program Secretary</p>
-        </div>
-
-        <div class="member-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <h3>Name</h3>
-            <p class="role">Treasurer</p>
-        </div>
-
-        <div class="member-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <h3>Name</h3>
-            <p class="role">Executive Member</p>
-        </div>
-
-        <div class="member-card">
-            <img src="{{ url_for('static', filename='images/placeholder.png') }}">
-            <h3>Name</h3>
-            <p class="role">Executive Member</p>
-        </div>
-
+        {% endfor %}
     </div>
 
 </section>

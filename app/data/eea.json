@@ -1,0 +1,99 @@
+{
+    "eea_description": {
+        "title": "Electronics Engineers Association",
+        "content": "The official student association of the Electronics and Communication Engineering department, fostering technical excellence, innovation, and professional growth.\r\nthey conduct events once ina semester."
+    },
+    "contact": {
+        "email": "eea2526official@gmail.com",
+        "instagram": "@eea_ece",
+        "linkedin": "Electronics Engineers Association",
+        "footer_note": "Department of Electronics & Communication Engineering, Madras Institute of technology"
+    },
+    "upcoming_event": {
+        "active": false,
+        "name": "ASCENTRON 2025",
+        "date": "20th june",
+        "description": "Ascentron is the flagship technical symposium of the Electronics Engineers Association. HI",
+        "link": "",
+        "title": "nandhini"
+    },
+    "members": [
+        {
+            "id": 1,
+            "name": "Dr. XYZ",
+            "role": "HOD",
+            "type": "faculty",
+            "photo": ""
+        },
+        {
+            "id": 2,
+            "name": "Dr. ABC",
+            "role": "President",
+            "type": "faculty",
+            "photo": ""
+        },
+        {
+            "id": 3,
+            "name": "Student Name",
+            "role": "Chairperson",
+            "type": "student",
+            "photo": ""
+        },
+        {
+            "id": 4,
+            "name": "Student Name",
+            "role": "Vice-Chairperson",
+            "type": "student",
+            "photo": ""
+        },
+        {
+            "id": 5,
+            "name": "Student Name",
+            "role": "Program Secretary",
+            "type": "student",
+            "photo": ""
+        },
+        {
+            "id": 6,
+            "name": "Student Name",
+            "role": "Treasurer",
+            "type": "student",
+            "photo": ""
+        },
+        {
+            "id": 7,
+            "name": "Student Name",
+            "role": "Executive member 1",
+            "type": "student",
+            "photo": ""
+        },
+        {
+            "id": 8,
+            "name": "Student Name",
+            "role": "Executive Member 2",
+            "type": "student",
+            "photo": ""
+        }
+    ],
+    "security": {
+        "master_email": "eeaofficial@gmail.com",
+        "master_password": "master123",
+        "role_passwords": {
+            "super": "super123",
+            "content": "content123",
+            "event": "event123"
+        }
+    },
+    "gallery": [
+        {
+            "id": 1,
+            "title": "ASCENTRON 2025",
+            "thumbnail": "EEA_Inaguration_Invitation_2025_page-0002.jpg",
+            "images": [
+                "img1.jpg",
+                "img2.jpg",
+                "img3.jpg"
+            ]
+        }
+    ]
+}

@@ -47,13 +47,11 @@
 
         <!-- LEFT -->
         <div class="footer-brand">
-            <h3>Electronics Engineers Association</h3>
-            <p>
-                Department of Electronics & Communication Engineering<br>
-                Official student association promoting innovation,
-                leadership, and technical excellence.
-            </p>
+            <h3>{{ eea_title }}</h3>
+            <p>{{ contact.footer_note }}</p>
         </div>
+
+
 
         <!-- CENTER -->
         <div class="footer-links">
@@ -69,9 +67,10 @@
         <!-- RIGHT -->
         <div class="footer-contact">
             <h4>Contact</h4>
-            <p>Email: eeaofficial@gmail.com</p>
-            <p>Instagram: @eea_ece</p>
-            <p>LinkedIn: Electronics Engineers Association</p>
+            <p>Email: {{ contact.email }}</p>
+            <p>Instagram: {{ contact.instagram }}</p>
+            <p>LinkedIn: {{ contact.linkedin }}</p>
+
         </div>
 
     </div>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-hero">
+    <h1>{{ gallery.title }}</h1>
+    <p>Event Gallery</p>
+</section>
+
+<section class="section gallery-images">
+
+    <div class="gallery-grid">
+        {% for image in gallery.images %}
+        <div class="gallery-item">
+            <!-- <img src="{{ url_for('static',
+                filename='uploads/gallery/' ~ gallery.id ~ '/' ~ image) }}"
+                 alt=""> -->
+                 <img src="{{ url_for(
+    'static',
+    filename='uploads/gallery/' ~ gallery.id ~ '/' ~ image
+) }}">
+
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+{% endblock %}
